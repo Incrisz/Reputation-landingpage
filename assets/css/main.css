@@ -83,9 +83,9 @@
     Theme Color
    =================== */
   /* Base Color */
-    --base-h: 0;
-    --base-s: 91%;
-    --base-l: 46%;
+    --base-h: 36;
+    --base-s: 71%;
+    --base-l: 53%;
     --base: var(--base-h) var(--base-s) var(--base-l);
     --base-d-100: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.1);
     --base-d-200: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.2);
@@ -108,9 +108,9 @@
     --base-l-900: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.9);
     --base-l-1000: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 1);
   /* Base Two Color */
-    --base-two-h: 11;
-    --base-two-s: 96%;
-    --base-two-l: 51%;
+    --base-two-h: 36;
+    --base-two-s: 71%;
+    --base-two-l: 53%;
     --base-two: var(--base-two-h) var(--base-two-s) var(--base-two-l);
     --base-two-d-100: var(--base-two-h) var(--base-two-s) calc(var(--base-two-l) - var(--base-two-l) * 0.1);
     --base-two-d-200: var(--base-two-h) var(--base-two-s) calc(var(--base-two-l) - var(--base-two-l) * 0.2);
