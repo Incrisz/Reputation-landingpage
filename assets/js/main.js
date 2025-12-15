@@ -821,7 +821,34 @@
     mainClass: 'mfp-fade',
     removalDelay: 160,
     preloader: false,
-    fixedContentPos: false
+    fixedContentPos: false,
+    iframe: {
+      patterns: {
+        youtube: {
+          index: 'youtube.com/',
+          id: function (url) {
+            if (url.indexOf('shorts/') !== -1) {
+              return url.split('shorts/')[1].split(/[?&]/)[0];
+            }
+            if (url.indexOf('v=') !== -1) {
+              return url.split('v=')[1].split(/[?&]/)[0];
+            }
+            if (url.indexOf('embed/') !== -1) {
+              return url.split('embed/')[1].split(/[?&]/)[0];
+            }
+            return null;
+          },
+          src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+        },
+        youtu_be: {
+          index: 'youtu.be/',
+          id: function (url) {
+            return url.split('youtu.be/')[1].split(/[?&]/)[0];
+          },
+          src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+        }
+      }
+    }
   });
 
   $('.services-one-box').hover(function () {
